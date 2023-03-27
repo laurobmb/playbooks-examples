@@ -1,0 +1,10 @@
+---
+- name: Implementing Handlers
+  hosts: web_servers
+
+  pre_tasks:
+    - name: Configuring Apache
+      ansible.builtin.include_tasks: apache.yml
+
+  roles:
+    - role: firewall
